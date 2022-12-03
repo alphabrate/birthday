@@ -1,0 +1,151 @@
+* {
+    font-family: "Times New Roman";
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+#reminder {
+    position: fixed;
+    z-index: 1024;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(55px);
+    -webkit-backdrop-filter: blur(55px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    transition: 0;
+    padding: 50px;
+    flex-wrap: wrap;
+    font-size: 13px;
+}
+
+body {
+    background-image: url(michael-krahn-eGD69I3ODC4-unsplash.jpg);
+    background-position: center 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+    user-select: none;
+}
+
+.dob {
+    backdrop-filter: brightness(0.6) blur(10px);
+    height: 70%;
+    border-radius: 5px;
+    width: 20%;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    overflow: scroll;
+    padding-left: 20%;
+    padding-right: 20%;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    outline: none;
+}
+
+button {
+    padding: 20px;
+    background-color: rgba(0, 115, 255, 0.283);
+    color: white;
+    margin: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.dob input[type=text], .dob input[type=button] {
+    margin-bottom: 40px;
+    height: 10px;
+    width: 10px;
+    padding: 19px;
+    background: rgba(0, 0, 0, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.dob input[type=birth] {
+    margin-bottom: 40px;
+    outline: none;
+    border: none;
+    height: 10px;
+    width: 90px;
+    text-align: center;
+    padding: 10px;
+    font-size: 15px;
+    background: rgba(0, 0, 0, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.dob input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.dob input[type=button] {
+    height: 0px;
+    width: 70px;
+    padding: 0;
+    border: 0;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+* {
+    transition: 1s;
+}
+
+span {
+    color: white;
+}
+.hovershowcase {
+    position: relative;
+}
+
+.hovershowcase:hover:after {
+    position: absolute;
+    max-width: 50vw;
+    width: 250px;
+    top: -10px;
+    margin-left: 5px;
+    content: attr(data-message);
+    background-color: rgba(0, 0, 0, .666);
+    padding: 5px;
+    animation: hovershowcase 1s;
+    overflow: hidden;
+}
+
+@keyframes hovershowcase {
+    from {
+        width: 0px;
+        margin-left: 0px;
+        background-color: rgba(0, 0, 0, 0);
+        opacity: 0;
+    }
+    to {
+        width: 250px;
+        margin-left: 5px;
+        background-color: rgba(0, 0, 0, .666);
+        opacity: 1;
+    }
+}
+
+::selection {
+    color: black;
+    background-color: rgba(108, 158, 229, 0.5);
+}
